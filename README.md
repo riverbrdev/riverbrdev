@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg">
-  <img alt="Bernardo Rios Tapia: backend, data and AI agent systems. Models, APIs and data flow into an orchestrator that ships them to AI Radar, Mundial 2026 and NotarTrack." src="./assets/banner-light.svg" width="100%">
+  <img alt="Bernardo Rios Tapia: backend, data and AI agent systems. Models, APIs and data flow into an orchestrator that ships them to AI Radar, Mundial 2026, NotarTrack and the next idea, still taking shape." src="./assets/banner-light.svg" width="100%">
 </picture>
 
 I build backend and data systems where models, APIs and data work together: scrapers that catch a signal early, pipelines that clean it, and agents that act on it.
