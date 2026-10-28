@@ -7,6 +7,15 @@ I build backend and data systems where models, APIs and data work together: scra
 
 Right now I'm in my 6th semester of Systems Engineering at UCB and building **NotarTrack**, a SaaS for notary offices in Bolivia.
 
+### How I build
+
+An idea, some code, and Claude Code at my side until it ships.
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/scene-dark.svg">
+  <img alt="A developer with curly hair gets an idea, writes code, Claude Code pops up over the monitor to help, and the work ships." src="./assets/scene-light.svg" width="100%">
+</picture>
+
 ### Featured projects
 
 | Project | What it does | Stack |
