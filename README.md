@@ -1,58 +1,35 @@
-<h1 align="center">Hi, I'm Bernardo 👋</h1>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/banner-dark.svg">
+  <img alt="Bernardo Rios Tapia: backend, data and AI agent systems" src="./assets/banner-light.svg" width="100%">
+</picture>
 
-<p align="center">
-  <b>Systems Engineering student</b> · Backend & Data · Cochabamba, Bolivia 🇧🇴
-</p>
+I build backend and data systems where models, APIs and data work together: scrapers that catch a signal early, pipelines that clean it, and agents that act on it.
 
-<p align="center">
-  Passionate about <b>AI</b> and building systems where multiple agents and services
-  work together. I enjoy the <b>orchestrator</b> role: connecting models, APIs and data
-  so they solve real problems end to end.
-</p>
+Right now I'm in my 6th semester of Systems Engineering at UCB and building **NotarTrack**, a SaaS for notary offices in Bolivia.
 
----
+### Featured projects
 
-### 🧠 What I'm working on
+| Project | What it does | Stack |
+|---|---|---|
+| **[github-ai-radar](https://github.com/riverbrdev/github-ai-radar)**<br>[Live demo](https://github-ai-radar.vercel.app/) | Detects emerging AI repositories by star momentum, refreshed every 6 hours. | Python, Polars, React, Vercel |
+| **[notartrack](https://github.com/riverbrdev/notartrack)** | Multi-tenant SaaS for tracking notary procedures, with WhatsApp updates. | Next.js 15, Drizzle, Auth.js |
+| **[mundial2026-ia-agentes](https://github.com/riverbrdev/mundial2026-ia-agentes)** | Monte Carlo simulation of the 2026 World Cup with a multi-agent architecture. | TypeScript |
 
-- 🤖 Designing **AI & multi-agent systems** (orchestrating models + tools)
-- 🛰️ Building **data & web scraping** pipelines (extract → clean → act)
-- 🏗️ Developing **NotarTrack**, a SaaS for notary offices in Bolivia
-- 📚 In my 6th semester of Systems Engineering at UCB
+### Tech stack
 
----
+**Backend:** .NET 9, C#, Clean Architecture, Node.js<br>
+**Data:** Python, Polars, Azure Data Factory, ETL, PostgreSQL, MySQL<br>
+**Frontend:** Next.js, TypeScript, React<br>
+**Cloud and DevOps:** Azure, Terraform, Vercel, GitHub Actions<br>
+**AI:** agent orchestration, LLM integration, RAG
 
-### 🛠️ Tech Stack
+### Contribution activity
 
-**Backend:** .NET 9 · C# · Clean Architecture · Node.js
-**Data:** Python · Polars · Azure Data Factory · ETL · PostgreSQL · MySQL
-**Frontend:** Next.js · TypeScript
-**Cloud & DevOps:** Azure · Terraform · Git
-**AI:** Agent orchestration · LLM integration · RAG
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/riverbrdev/riverbrdev/output/github-snake-dark.svg">
+  <img alt="My contribution graph, eaten by a snake" src="https://raw.githubusercontent.com/riverbrdev/riverbrdev/output/github-snake.svg">
+</picture>
 
----
+### Get in touch
 
-### 🚀 Featured Projects
-
-| Project | What it does |
-|---------|--------------|
-| 🛰️ **[github-ai-radar](https://github.com/BerniUCb/github-ai-radar)** | Scraper that detects emerging AI repos by star momentum |
-| 📋 **[notartrack](https://github.com/BerniUCb/notartrack)** | Multi-tenant SaaS for notary workflow management (Next.js + WhatsApp) |
-| 🏆 **[mundial2026-ia-agentes](https://github.com/BerniUCb/mundial2026-ia-agentes)** | Monte Carlo simulation of the 2026 World Cup with a multi-agent architecture |
-
----
-
-### 📫 Get in touch
-
-<p align="left">
-  <a href="mailto:briostapia@gmail.com">📧 briostapia@gmail.com</a>
-</p>
-
----
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=BerniUCb&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=BerniUCb&layout=compact&theme=tokyonight&hide_border=true" alt="Top Languages" />
-</p>
+Email: [briostapia@gmail.com](mailto:briostapia@gmail.com)
