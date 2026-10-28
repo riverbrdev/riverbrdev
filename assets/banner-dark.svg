@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-labelledby="title desc">
+  <title id="title">Bernardo Rios Tapia</title>
+  <desc id="desc">Backend, data and AI agent systems. A radar sweep scans for emerging signals.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F1117"/>
+      <stop offset="1" stop-color="#171A23"/>
+    </linearGradient>
+    <clipPath id="scope"><circle cx="930" cy="168" r="134"/></clipPath>
+  </defs>
+  <style>
+    .sweep { transform-origin: 930px 168px; animation: spin 6.0s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .blip { opacity: .18; animation: ping 6.0s linear infinite; }
+    @keyframes ping { 0% { opacity: 1; } 30% { opacity: .18; } 100% { opacity: .18; } }
+    .halo { opacity: 0; transform-box: fill-box; transform-origin: center; animation: halo 6.0s ease-out infinite; }
+    @keyframes halo { 0% { opacity: .9; transform: scale(1); } 40% { opacity: 0; transform: scale(3.4); } 100% { opacity: 0; transform: scale(3.4); } }
+    .reveal { animation: reveal .9s ease-out backwards; }
+    @keyframes reveal { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    @media (prefers-reduced-motion: reduce) {
+      .sweep, .halo { animation: none; }
+      .blip { animation: none; opacity: .9; }
+      .reveal { animation: none; }
+    }
+  </style>
+
+  <rect x="0.5" y="0.5" width="1199" height="359" rx="16" fill="url(#bg)" stroke="#262B38"/>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <text class="reveal" x="72" y="116" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#6e8bff" style="animation-delay:.1s">~/riverbrdev</text>
+    <text class="reveal" x="72" y="178" font-size="54" font-weight="700" letter-spacing="-1" fill="#E6E9F0" style="animation-delay:.25s">Bernardo Rios Tapia</text>
+    <text class="reveal" x="72" y="222" font-size="23" font-weight="600" fill="#42e1b3" style="animation-delay:.45s">Backend, data and AI agent systems</text>
+    <text class="reveal" x="72" y="258" font-size="17" fill="#8A92A6" style="animation-delay:.6s">Systems Engineering student in Cochabamba, Bolivia</text>
+  </g>
+
+  <g>
+    <circle cx="930" cy="168" r="45" fill="none" stroke="#262B38" stroke-width="1"/>
+    <circle cx="930" cy="168" r="89" fill="none" stroke="#262B38" stroke-width="1"/>
+    <circle cx="930" cy="168" r="134" fill="none" stroke="#262B38" stroke-width="1"/>
+    <line x1="796" y1="168" x2="1064" y2="168" stroke="#1d2130" stroke-width="1"/>
+    <line x1="930" y1="34" x2="930" y2="302" stroke="#1d2130" stroke-width="1"/>
+    <g clip-path="url(#scope)">
+      <g class="sweep">
+      <path d="M930 168 L930.0 34.0 A134 134 0 0 0 916.0 34.7 Z" fill="#42e1b3" fill-opacity="0.440"/>
+      <path d="M930 168 L916.0 34.7 A134 134 0 0 0 902.1 36.9 Z" fill="#42e1b3" fill-opacity="0.359"/>
+      <path d="M930 168 L902.1 36.9 A134 134 0 0 0 888.6 40.6 Z" fill="#42e1b3" fill-opacity="0.285"/>
+      <path d="M930 168 L888.6 40.6 A134 134 0 0 0 875.5 45.6 Z" fill="#42e1b3" fill-opacity="0.218"/>
+      <path d="M930 168 L875.5 45.6 A134 134 0 0 0 863.0 52.0 Z" fill="#42e1b3" fill-opacity="0.159"/>
+      <path d="M930 168 L863.0 52.0 A134 134 0 0 0 851.2 59.6 Z" fill="#42e1b3" fill-opacity="0.107"/>
+      <path d="M930 168 L851.2 59.6 A134 134 0 0 0 840.3 68.4 Z" fill="#42e1b3" fill-opacity="0.066"/>
+      <path d="M930 168 L840.3 68.4 A134 134 0 0 0 830.4 78.3 Z" fill="#42e1b3" fill-opacity="0.035"/>
+      <line x1="930" y1="168" x2="930.0" y2="34.0" stroke="#42e1b3" stroke-width="2"/>
+      </g>
+    </g>
+    <circle class="blip" cx="964.6" cy="102.9" r="4" fill="#42e1b3" style="animation-delay:-5.53s"/>
+    <circle class="blip" cx="1036.1" cy="139.6" r="3" fill="#42e1b3" style="animation-delay:-4.75s"/>
+    <circle class="blip" cx="971.4" cy="190.0" r="5" fill="#42e1b3" style="animation-delay:-4.03s"/>
+    <circle class="blip" cx="962.1" cy="256.1" r="3" fill="#42e1b3" style="animation-delay:-3.33s"/>
+    <circle class="blip" cx="879.0" cy="277.3" r="4" fill="#42e1b3" style="animation-delay:-2.58s"/>
+    <circle class="blip" cx="873.3" cy="188.6" r="3" fill="#42e1b3" style="animation-delay:-1.83s"/>
+    <circle class="blip" cx="915.9" cy="133.2" r="3" fill="#42e1b3" style="animation-delay:-0.37s"/>
+    <circle class="halo" cx="858.1" cy="126.5" r="6" fill="none" stroke="#b7c4ff" stroke-width="2" style="animation-delay:-1.00s"/>
+    <circle class="blip" cx="858.1" cy="126.5" r="6" fill="#b7c4ff" style="animation-delay:-1.00s"/>
+    <circle cx="930" cy="168" r="3" fill="#42e1b3"/>
+    <text x="930" y="332" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#8A92A6">scanning for emerging AI repos</text>
+  </g>
+</svg>
