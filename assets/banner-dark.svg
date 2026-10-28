@@ -1,30 +1,53 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-labelledby="title desc">
   <title id="title">Bernardo Rios Tapia</title>
-  <desc id="desc">Backend, data and AI agent systems. A radar sweep scans for emerging signals.</desc>
+  <desc id="desc">Backend, data and AI agent systems. Models, APIs and data flow into an orchestrator that ships them to AI Radar, Mundial 2026, NotarTrack and the next idea, still taking shape.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0F1117"/>
       <stop offset="1" stop-color="#171A23"/>
     </linearGradient>
-    <clipPath id="scope"><circle cx="930" cy="168" r="134"/></clipPath>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#20242f"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" x2="1">
+      <stop offset=".35" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".6" stop-color="#fff" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="gridMask"><rect width="1200" height="360" fill="url(#fade)"/></mask>
+    <!-- userSpaceOnUse: a horizontal path has a zero-height bounding box, which
+         would collapse a bbox-relative filter region and hide the packet. -->
+    <filter id="glow" filterUnits="userSpaceOnUse" x="0" y="0" width="1200" height="360">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComponentTransfer in="blur" result="soft"><feFuncA type="linear" slope=".9"/></feComponentTransfer>
+      <feMerge><feMergeNode in="soft"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
   <style>
-    .sweep { transform-origin: 930px 168px; animation: spin 6.0s linear infinite; }
+    .packet { stroke-dasharray: 10 200; stroke-dashoffset: 10; }
+    .packet.in { animation: flowIn 7.2s linear infinite; }
+    .packet.out { animation: flowOut 7.2s linear infinite; }
+    @keyframes flowIn { 0% { stroke-dashoffset: 10; } 8.8% { stroke-dashoffset: -100; } 100% { stroke-dashoffset: -100; } }
+    @keyframes flowOut { 0% { stroke-dashoffset: 10; } 10.0% { stroke-dashoffset: -100; } 100% { stroke-dashoffset: -100; } }
+    .ring { opacity: 0; transform-box: fill-box; transform-origin: center; animation: arrive 7.2s ease-out infinite; }
+    @keyframes arrive { 0%, 9.5% { opacity: 0; transform: scale(1); } 10.5% { opacity: .95; transform: scale(1); } 32.0% { opacity: 0; transform: scale(1.8); } 100% { opacity: 0; transform: scale(1.8); } }
+    .hub-pulse { opacity: 0; transform-box: fill-box; transform-origin: center; animation: emit 1.8s ease-out infinite; animation-delay: -1.17s; }
+    @keyframes emit { 0% { opacity: .85; transform: scale(1); } 60% { opacity: 0; transform: scale(1.5); } 100% { opacity: 0; transform: scale(1.5); } }
+    .mini-sweep { animation: spin 3s linear infinite; }
     @keyframes spin { to { transform: rotate(360deg); } }
-    .blip { opacity: .18; animation: ping 6.0s linear infinite; }
-    @keyframes ping { 0% { opacity: 1; } 30% { opacity: .18; } 100% { opacity: .18; } }
-    .halo { opacity: 0; transform-box: fill-box; transform-origin: center; animation: halo 6.0s ease-out infinite; }
-    @keyframes halo { 0% { opacity: .9; transform: scale(1); } 40% { opacity: 0; transform: scale(3.4); } 100% { opacity: 0; transform: scale(3.4); } }
+    .idea { opacity: .4; animation: materialize 7.2s ease-out infinite; }
+    @keyframes materialize { 0%, 9.5% { opacity: .4; } 10.5% { opacity: 1; } 55.0% { opacity: 1; } 72.0% { opacity: .4; } 100% { opacity: .4; } }
+    .idea-ring { transform-box: fill-box; transform-origin: center; animation: spin 14s linear infinite; }
     .reveal { animation: reveal .9s ease-out backwards; }
     @keyframes reveal { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
     @media (prefers-reduced-motion: reduce) {
-      .sweep, .halo { animation: none; }
-      .blip { animation: none; opacity: .9; }
-      .reveal { animation: none; }
+      .packet, .ring, .hub-pulse { animation: none; display: none; }
+      .mini-sweep, .reveal, .idea-ring { animation: none; }
+      .idea { animation: none; opacity: .85; }
     }
   </style>
 
   <rect x="0.5" y="0.5" width="1199" height="359" rx="16" fill="url(#bg)" stroke="#262B38"/>
+  <rect x="0" y="0" width="1200" height="360" fill="url(#grid)" mask="url(#gridMask)"/>
 
   <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
     <text class="reveal" x="72" y="116" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="17" fill="#6e8bff" style="animation-delay:.1s">~/riverbrdev</text>
@@ -33,35 +56,15 @@
     <text class="reveal" x="72" y="258" font-size="17" fill="#8A92A6" style="animation-delay:.6s">Systems Engineering student in Cochabamba, Bolivia</text>
   </g>
 
-  <g>
-    <circle cx="930" cy="168" r="45" fill="none" stroke="#262B38" stroke-width="1"/>
-    <circle cx="930" cy="168" r="89" fill="none" stroke="#262B38" stroke-width="1"/>
-    <circle cx="930" cy="168" r="134" fill="none" stroke="#262B38" stroke-width="1"/>
-    <line x1="796" y1="168" x2="1064" y2="168" stroke="#1d2130" stroke-width="1"/>
-    <line x1="930" y1="34" x2="930" y2="302" stroke="#1d2130" stroke-width="1"/>
-    <g clip-path="url(#scope)">
-      <g class="sweep">
-      <path d="M930 168 L930.0 34.0 A134 134 0 0 0 916.0 34.7 Z" fill="#42e1b3" fill-opacity="0.440"/>
-      <path d="M930 168 L916.0 34.7 A134 134 0 0 0 902.1 36.9 Z" fill="#42e1b3" fill-opacity="0.359"/>
-      <path d="M930 168 L902.1 36.9 A134 134 0 0 0 888.6 40.6 Z" fill="#42e1b3" fill-opacity="0.285"/>
-      <path d="M930 168 L888.6 40.6 A134 134 0 0 0 875.5 45.6 Z" fill="#42e1b3" fill-opacity="0.218"/>
-      <path d="M930 168 L875.5 45.6 A134 134 0 0 0 863.0 52.0 Z" fill="#42e1b3" fill-opacity="0.159"/>
-      <path d="M930 168 L863.0 52.0 A134 134 0 0 0 851.2 59.6 Z" fill="#42e1b3" fill-opacity="0.107"/>
-      <path d="M930 168 L851.2 59.6 A134 134 0 0 0 840.3 68.4 Z" fill="#42e1b3" fill-opacity="0.066"/>
-      <path d="M930 168 L840.3 68.4 A134 134 0 0 0 830.4 78.3 Z" fill="#42e1b3" fill-opacity="0.035"/>
-      <line x1="930" y1="168" x2="930.0" y2="34.0" stroke="#42e1b3" stroke-width="2"/>
-      </g>
-    </g>
-    <circle class="blip" cx="964.6" cy="102.9" r="4" fill="#42e1b3" style="animation-delay:-5.53s"/>
-    <circle class="blip" cx="1036.1" cy="139.6" r="3" fill="#42e1b3" style="animation-delay:-4.75s"/>
-    <circle class="blip" cx="971.4" cy="190.0" r="5" fill="#42e1b3" style="animation-delay:-4.03s"/>
-    <circle class="blip" cx="962.1" cy="256.1" r="3" fill="#42e1b3" style="animation-delay:-3.33s"/>
-    <circle class="blip" cx="879.0" cy="277.3" r="4" fill="#42e1b3" style="animation-delay:-2.58s"/>
-    <circle class="blip" cx="873.3" cy="188.6" r="3" fill="#42e1b3" style="animation-delay:-1.83s"/>
-    <circle class="blip" cx="915.9" cy="133.2" r="3" fill="#42e1b3" style="animation-delay:-0.37s"/>
-    <circle class="halo" cx="858.1" cy="126.5" r="6" fill="none" stroke="#b7c4ff" stroke-width="2" style="animation-delay:-1.00s"/>
-    <circle class="blip" cx="858.1" cy="126.5" r="6" fill="#b7c4ff" style="animation-delay:-1.00s"/>
-    <circle cx="930" cy="168" r="3" fill="#42e1b3"/>
-    <text x="930" y="332" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#8A92A6">scanning for emerging AI repos</text>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <path d="M686.0 112.0 Q736.1 127.7 776.8 161.0" fill="none" stroke="#2c3242" stroke-width="1.5"/><path d="M686.0 180.0 Q729.0 180.0 772.0 180.0" fill="none" stroke="#2c3242" stroke-width="1.5"/><path d="M686.0 248.0 Q736.1 232.3 776.8 199.0" fill="none" stroke="#2c3242" stroke-width="1.5"/><path d="M844.0 156.0 Q884.5 99.5 950.2 76.6" fill="none" stroke="#2c3242" stroke-width="1.5"/><path d="M851.1 171.4 Q909.9 151.2 971.7 144.7" fill="none" stroke="#2c3242" stroke-width="1.5"/><path d="M851.1 188.6 Q909.9 208.8 971.7 215.3" fill="none" stroke="#2c3242" stroke-width="1.5"/><path d="M844.0 204.0 Q884.5 260.5 950.2 283.4" fill="none" stroke="#2c3242" stroke-width="1.5" stroke-dasharray="3 5"/>
+    <rect x="614" y="98" width="72" height="28" rx="14" fill="#141821" stroke="#2c3242" stroke-width="1.2"/><text x="650" y="116.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#8A92A6">models</text><rect x="614" y="166" width="72" height="28" rx="14" fill="#141821" stroke="#2c3242" stroke-width="1.2"/><text x="650" y="184.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#8A92A6">APIs</text><rect x="614" y="234" width="72" height="28" rx="14" fill="#141821" stroke="#2c3242" stroke-width="1.2"/><text x="650" y="252.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13" fill="#8A92A6">data</text>
+    <path class="packet in" pathLength="100" d="M686.0 112.0 Q736.1 127.7 776.8 161.0" fill="none" stroke="#b7c4ff" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)" style="animation-delay:-7.20s"/><path class="packet in" pathLength="100" d="M686.0 112.0 Q736.1 127.7 776.8 161.0" fill="none" stroke="#b7c4ff" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)" style="animation-delay:-1.80s"/><path class="packet in" pathLength="100" d="M686.0 180.0 Q729.0 180.0 772.0 180.0" fill="none" stroke="#b7c4ff" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)" style="animation-delay:-5.40s"/><path class="packet in" pathLength="100" d="M686.0 180.0 Q729.0 180.0 772.0 180.0" fill="none" stroke="#b7c4ff" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)" style="animation-delay:-1.80s"/><path class="packet in" pathLength="100" d="M686.0 248.0 Q736.1 232.3 776.8 199.0" fill="none" stroke="#b7c4ff" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)" style="animation-delay:-3.60s"/><path class="packet in" pathLength="100" d="M686.0 248.0 Q736.1 232.3 776.8 199.0" fill="none" stroke="#b7c4ff" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)" style="animation-delay:-1.80s"/><path class="packet out" pathLength="100" d="M844.0 156.0 Q884.5 99.5 950.2 76.6" fill="none" stroke="#42e1b3" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)" style="animation-delay:-6.57s"/><path class="packet out" pathLength="100" d="M851.1 171.4 Q909.9 151.2 971.7 144.7" fill="none" stroke="#ffb960" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)" style="animation-delay:-4.77s"/><path class="packet out" pathLength="100" d="M851.1 188.6 Q909.9 208.8 971.7 215.3" fill="none" stroke="#6e8bff" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)" style="animation-delay:-2.97s"/><path class="packet out" pathLength="100" d="M844.0 204.0 Q884.5 260.5 950.2 283.4" fill="none" stroke="#b7c4ff" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)" style="animation-delay:-1.17s"/>
+    <polygon class="hub-pulse" points="812.0,146.0 841.4,163.0 841.4,197.0 812.0,214.0 782.6,197.0 782.6,163.0" fill="none" stroke="#b7c4ff" stroke-width="2"/>
+    <polygon points="812.0,146.0 841.4,163.0 841.4,197.0 812.0,214.0 782.6,197.0 782.6,163.0" fill="#141821" stroke="#b7c4ff" stroke-width="2"/>
+    <polygon points="812.0,167.0 823.3,173.5 823.3,186.5 812.0,193.0 800.7,186.5 800.7,173.5" fill="#b7c4ff"/>
+    <text x="812" y="250" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#8A92A6">orchestrator</text>
+    <circle class="ring" cx="975" cy="58" r="25" fill="none" stroke="#42e1b3" stroke-width="2" style="animation-delay:-6.57s"/><circle cx="975" cy="58" r="25" fill="#141821" stroke="#42e1b3" stroke-opacity=".6" stroke-width="1.5"/><circle cx="975" cy="58" r="13" fill="none" stroke="#42e1b3" stroke-opacity=".5"/><circle cx="975" cy="58" r="6" fill="none" stroke="#42e1b3" stroke-opacity=".35"/><g class="mini-sweep" style="transform-origin:975px 58px"><path d="M975 58 L975.0 45.0 A13 13 0 0 0 964.4 50.5 Z" fill="#42e1b3" fill-opacity=".45"/><line x1="975" y1="58" x2="975.0" y2="45.0" stroke="#42e1b3" stroke-width="1.5"/></g><circle class="ring" cx="1002" cy="138" r="25" fill="none" stroke="#ffb960" stroke-width="2" style="animation-delay:-4.77s"/><circle cx="1002" cy="138" r="25" fill="#141821" stroke="#ffb960" stroke-opacity=".6" stroke-width="1.5"/><line x1="1002.0" y1="128.0" x2="1010.7" y2="143.0" stroke="#ffb960" stroke-opacity=".55" stroke-width="1.4"/><line x1="1010.7" y1="143.0" x2="993.3" y2="143.0" stroke="#ffb960" stroke-opacity=".55" stroke-width="1.4"/><line x1="993.3" y1="143.0" x2="1002.0" y2="128.0" stroke="#ffb960" stroke-opacity=".55" stroke-width="1.4"/><circle cx="1002.0" cy="128.0" r="3.2" fill="#ffb960"/><circle cx="1010.7" cy="143.0" r="3.2" fill="#ffb960"/><circle cx="993.3" cy="143.0" r="3.2" fill="#ffb960"/><circle class="ring" cx="1002" cy="222" r="25" fill="none" stroke="#6e8bff" stroke-width="2" style="animation-delay:-2.97s"/><circle cx="1002" cy="222" r="25" fill="#141821" stroke="#6e8bff" stroke-opacity=".6" stroke-width="1.5"/><rect x="994" y="211" width="16" height="22" rx="2.5" fill="none" stroke="#6e8bff" stroke-width="1.6"/><path d="M998 223 l3 3 l6 -7" fill="none" stroke="#6e8bff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle class="ring" cx="975" cy="302" r="25" fill="none" stroke="#b7c4ff" stroke-width="2" style="animation-delay:-1.17s"/><g class="idea" style="animation-delay:-1.17s"><circle cx="975" cy="302" r="25" fill="#141821"/><circle class="idea-ring" cx="975" cy="302" r="25" fill="none" stroke="#b7c4ff" stroke-width="1.6" stroke-dasharray="5 5"/><text x="975" y="309" text-anchor="middle" font-size="21" font-weight="700" fill="#b7c4ff">?</text></g>
+    <text x="1014" y="56" font-size="16" font-weight="700" fill="#E6E9F0">AI Radar</text><text x="1014" y="74" font-size="12.5" fill="#8A92A6">trend detection</text><text x="1041" y="136" font-size="16" font-weight="700" fill="#E6E9F0">Mundial 2026</text><text x="1041" y="154" font-size="12.5" fill="#8A92A6">agent simulation</text><text x="1041" y="220" font-size="16" font-weight="700" fill="#E6E9F0">NotarTrack</text><text x="1041" y="238" font-size="12.5" fill="#8A92A6">SaaS for notaries</text><text x="1014" y="300" font-size="16" font-weight="700" fill="#E6E9F0">next idea</text><text x="1014" y="318" font-size="12.5" fill="#8A92A6">in the works</text>
   </g>
 </svg>
