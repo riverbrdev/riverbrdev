@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 390" width="840" height="390" role="img" aria-labelledby="stitle sdesc">
+  <title id="stitle">How I build</title>
+  <desc id="sdesc">A developer with curly hair gets an idea, writes code, Claude Code pops up over the monitor to help, and the work ships.</desc>
+  <defs>
+    <linearGradient id="sbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F1117"/>
+      <stop offset="1" stop-color="#171A23"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#ffd27a" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#ffd27a" stop-opacity="0"/>
+    </radialGradient>
+    <clipPath id="screen"><rect x="630" y="96" width="220" height="104" rx="4"/></clipPath>
+    <clipPath id="hairClip"><path d="M376 82 L486 82 L486 139 L454 139 Q438 141 432 152 L429 176 L376 176 Z"/></clipPath>
+  </defs>
+  <style>
+    .hand { animation: type .32s ease-in-out infinite alternate; }
+    .hand.back { animation-delay: -.16s; }
+    @keyframes type { to { transform: translateY(-3px); } }
+    .eye { transform-box: fill-box; transform-origin: center; animation: blink 4s infinite; }
+    @keyframes blink { 0%, 95% { transform: scaleY(1); } 97% { transform: scaleY(.1); } 100% { transform: scaleY(1); } }
+    .bubble { transform-box: fill-box; transform-origin: 0% 100%; animation: bubble 12.0s ease-out infinite; }
+    @keyframes bubble { 0%, 7% { opacity: 0; transform: scale(.6); } 11% { opacity: 1; transform: scale(1); } 40% { opacity: 1; transform: scale(1); } 46%, 100% { opacity: 0; transform: scale(.9); } }
+    .bulb-on { animation: bulb 12.0s ease-out infinite; }
+    @keyframes bulb { 0%, 13% { opacity: 0; } 16% { opacity: 1; } 40% { opacity: 1; } 46%, 100% { opacity: 0; } }
+    .code { transform-box: fill-box; transform-origin: 0% 50%; }
+    @keyframes c0 { 0%, 20.00% { transform: scaleX(0); opacity: 1; } 23.00% { transform: scaleX(1); opacity: 1; } 86% { transform: scaleX(1); opacity: 1; } 91% { transform: scaleX(1); opacity: 0; } 100% { transform: scaleX(0); opacity: 0; } }
+    .c0 { animation: c0 12.0s linear infinite; }
+    @keyframes c1 { 0%, 24.00% { transform: scaleX(0); opacity: 1; } 27.00% { transform: scaleX(1); opacity: 1; } 86% { transform: scaleX(1); opacity: 1; } 91% { transform: scaleX(1); opacity: 0; } 100% { transform: scaleX(0); opacity: 0; } }
+    .c1 { animation: c1 12.0s linear infinite; }
+    @keyframes c2 { 0%, 28.00% { transform: scaleX(0); opacity: 1; } 31.00% { transform: scaleX(1); opacity: 1; } 86% { transform: scaleX(1); opacity: 1; } 91% { transform: scaleX(1); opacity: 0; } 100% { transform: scaleX(0); opacity: 0; } }
+    .c2 { animation: c2 12.0s linear infinite; }
+    @keyframes c3 { 0%, 32.00% { transform: scaleX(0); opacity: 1; } 35.00% { transform: scaleX(1); opacity: 1; } 86% { transform: scaleX(1); opacity: 1; } 91% { transform: scaleX(1); opacity: 0; } 100% { transform: scaleX(0); opacity: 0; } }
+    .c3 { animation: c3 12.0s linear infinite; }
+    @keyframes c4 { 0%, 36.00% { transform: scaleX(0); opacity: 1; } 39.00% { transform: scaleX(1); opacity: 1; } 86% { transform: scaleX(1); opacity: 1; } 91% { transform: scaleX(1); opacity: 0; } 100% { transform: scaleX(0); opacity: 0; } }
+    .c4 { animation: c4 12.0s linear infinite; }
+    @keyframes c5 { 0%, 55.00% { transform: scaleX(0); opacity: 1; } 56.20% { transform: scaleX(1); opacity: 1; } 86% { transform: scaleX(1); opacity: 1; } 91% { transform: scaleX(1); opacity: 0; } 100% { transform: scaleX(0); opacity: 0; } }
+    .c5 { animation: c5 12.0s linear infinite; }
+    @keyframes c6 { 0%, 57.00% { transform: scaleX(0); opacity: 1; } 58.20% { transform: scaleX(1); opacity: 1; } 86% { transform: scaleX(1); opacity: 1; } 91% { transform: scaleX(1); opacity: 0; } 100% { transform: scaleX(0); opacity: 0; } }
+    .c6 { animation: c6 12.0s linear infinite; }
+    @keyframes c7 { 0%, 59.00% { transform: scaleX(0); opacity: 1; } 60.20% { transform: scaleX(1); opacity: 1; } 86% { transform: scaleX(1); opacity: 1; } 91% { transform: scaleX(1); opacity: 0; } 100% { transform: scaleX(0); opacity: 0; } }
+    .c7 { animation: c7 12.0s linear infinite; }
+    .claude { animation: claude 12.0s ease-out infinite; }
+    @keyframes claude { 0%, 47% { transform: translateY(40px); } 50% { transform: translateY(-7px); } 52% { transform: translateY(0); }
+      62% { transform: translateY(0); } 63.5% { transform: translateY(-5px); } 65% { transform: translateY(0); }
+      86% { transform: translateY(0); } 91%, 100% { transform: translateY(40px); } }
+    .spark { transform-box: fill-box; transform-origin: center; animation: spark 12.0s ease-out infinite; }
+    .spark.s2 { animation-name: spark2; }
+    .spark.s3 { animation-name: spark3; }
+    @keyframes spark { 0%, 50% { opacity: 0; transform: scale(.2); } 53% { opacity: 1; transform: scale(1); } 60%, 100% { opacity: 0; transform: scale(1.3); } }
+    @keyframes spark2 { 0%, 52% { opacity: 0; transform: scale(.2); } 55% { opacity: 1; transform: scale(1); } 62%, 100% { opacity: 0; transform: scale(1.3); } }
+    @keyframes spark3 { 0%, 54% { opacity: 0; transform: scale(.2); } 57% { opacity: 1; transform: scale(1); } 64%, 100% { opacity: 0; transform: scale(1.3); } }
+    .ship { transform-box: fill-box; transform-origin: center; animation: ship 12.0s ease-out infinite; }
+    @keyframes ship { 0%, 64% { opacity: 0; transform: scale(0); } 67.5% { opacity: 1; transform: scale(1.15); } 70% { opacity: 1; transform: scale(1); } 86% { opacity: 1; transform: scale(1); } 91%, 100% { opacity: 0; transform: scale(1); } }
+    .ship-label { animation: shiplabel 12.0s ease-out infinite; }
+    @keyframes shiplabel { 0%, 67% { opacity: 0; } 71% { opacity: 1; } 86% { opacity: 1; } 91%, 100% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; }
+    }
+  </style>
+
+  <rect x="0.5" y="0.5" width="839" height="389" rx="16" fill="url(#sbg)" stroke="#262B38"/>
+
+  <g transform="translate(-250 -10)">
+  <line x1="300" y1="372" x2="1040" y2="372" stroke="#232838" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Chair -->
+  <rect x="350" y="204" width="13" height="99" rx="6" fill="#2c3344"/>
+  <rect x="352" y="296" width="100" height="11" rx="5" fill="#2c3344"/>
+  <rect x="396" y="306" width="9" height="56" fill="#2c3344"/>
+  <rect x="368" y="358" width="64" height="7" rx="3.5" fill="#2c3344"/>
+
+  <!-- Legs -->
+  <path d="M402 298 L514 298 L518 360" fill="none" stroke="#262c3a" stroke-width="22" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M506 370 L506 362 Q506 356 514 356 L534 358 Q542 360 542 366 L542 370 Z" fill="#151922"/>
+
+  <!-- Back arm, behind the torso -->
+  <path d="M448 214 L474 258 L540 236" fill="none" stroke="#3a47ad" stroke-width="14" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle class="hand back" cx="548" cy="235" r="7" fill="#A86B35"/>
+
+  <!-- Torso: hoodie with a curved back and the hood resting behind the neck -->
+  <path d="M400 202 C382 230 384 278 392 300 L468 300 C470 262 468 228 460 210 C450 196 424 192 400 202 Z" fill="#4b5bd6"/>
+  <path d="M396 206 C392 194 404 184 418 186 L424 196 C412 196 404 200 400 210 Z" fill="#3a47ad"/>
+  <path d="M452 214 C460 240 462 270 462 298" fill="none" stroke="#5d6ce0" stroke-width="2" stroke-linecap="round" opacity=".6"/>
+  <rect x="424" y="172" width="20" height="26" rx="7" fill="#A86B35"/>
+
+  <!-- Head and face (facing right) -->
+  <circle cx="436" cy="152" r="27" fill="#C68642"/>
+  <path d="M460 149 Q470 156 461 161" fill="#C68642"/>
+  <circle class="eye" cx="451" cy="151" r="2.8" fill="#2B1B14"/>
+  <path d="M446 144 Q452 141 458 144" fill="none" stroke="#2B1B14" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M451 167 Q456 170 460 166" fill="none" stroke="#A86B35" stroke-width="2" stroke-linecap="round"/>
+  <g clip-path="url(#hairClip)"><circle cx="432" cy="144" r="27" fill="#2B1B14"/><circle cx="412.8" cy="167.7" r="11" fill="#2B1B14"/><circle cx="409.5" cy="161.1" r="11" fill="#2B1B14"/><circle cx="408.1" cy="154.0" r="11" fill="#2B1B14"/><circle cx="408.5" cy="146.7" r="13" fill="#2B1B14"/><circle cx="410.8" cy="139.7" r="13" fill="#2B1B14"/><circle cx="414.9" cy="133.6" r="13" fill="#2B1B14"/><circle cx="420.3" cy="128.8" r="13" fill="#2B1B14"/><circle cx="426.9" cy="125.5" r="13" fill="#2B1B14"/><circle cx="434.0" cy="124.1" r="13" fill="#2B1B14"/><circle cx="441.3" cy="124.5" r="13" fill="#2B1B14"/><circle cx="448.3" cy="126.8" r="13" fill="#2B1B14"/><circle cx="454.4" cy="130.9" r="11" fill="#2B1B14"/><circle cx="455.9" cy="138.6" r="11" fill="#2B1B14"/><path d="M407.8 167.7 a5.0 5.0 0 1 0 9.9 0" fill="none" stroke="#4a3328" stroke-width="1.6" stroke-linecap="round"/><path d="M404.6 161.1 a5.0 5.0 0 1 1 9.9 0" fill="none" stroke="#4a3328" stroke-width="1.6" stroke-linecap="round"/><path d="M403.1 154.0 a5.0 5.0 0 1 0 9.9 0" fill="none" stroke="#4a3328" stroke-width="1.6" stroke-linecap="round"/><path d="M402.7 146.7 a5.9 5.9 0 1 1 11.7 0" fill="none" stroke="#4a3328" stroke-width="1.6" stroke-linecap="round"/><path d="M405.0 139.7 a5.9 5.9 0 1 0 11.7 0" fill="none" stroke="#4a3328" stroke-width="1.6" stroke-linecap="round"/><path d="M409.0 133.6 a5.9 5.9 0 1 1 11.7 0" fill="none" stroke="#4a3328" stroke-width="1.6" stroke-linecap="round"/><path d="M414.5 128.8 a5.9 5.9 0 1 0 11.7 0" fill="none" stroke="#4a3328" stroke-width="1.6" stroke-linecap="round"/><path d="M421.0 125.5 a5.9 5.9 0 1 1 11.7 0" fill="none" stroke="#4a3328" stroke-width="1.6" stroke-linecap="round"/><path d="M428.2 124.1 a5.9 5.9 0 1 0 11.7 0" fill="none" stroke="#4a3328" stroke-width="1.6" stroke-linecap="round"/><path d="M435.5 124.5 a5.9 5.9 0 1 1 11.7 0" fill="none" stroke="#4a3328" stroke-width="1.6" stroke-linecap="round"/><path d="M442.4 126.8 a5.9 5.9 0 1 0 11.7 0" fill="none" stroke="#4a3328" stroke-width="1.6" stroke-linecap="round"/><path d="M449.4 130.9 a5.0 5.0 0 1 1 9.9 0" fill="none" stroke="#4a3328" stroke-width="1.6" stroke-linecap="round"/><path d="M450.9 138.6 a5.0 5.0 0 1 0 9.9 0" fill="none" stroke="#4a3328" stroke-width="1.6" stroke-linecap="round"/></g>
+  <ellipse cx="429" cy="158" rx="4.5" ry="6.5" fill="#A86B35"/>
+
+  <!-- Front arm, typing -->
+  <path d="M436 214 L462 264 L530 240" fill="none" stroke="#4b5bd6" stroke-width="15" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle class="hand" cx="536" cy="238" r="7.5" fill="#C68642"/>
+
+  <!-- Thought bubble with the idea -->
+  <g class="bubble">
+    <circle cx="474" cy="114" r="4" fill="#232838" stroke="#3a4152"/>
+    <circle cx="487" cy="99" r="6.5" fill="#232838" stroke="#3a4152"/>
+    <path d="M497 80 Q487 56 512 50 Q522 30 547 39 Q570 31 578 54 Q597 62 584 81 Q578 94 556 89 Q537 98 519 89 Q497 92 497 80 Z" fill="#232838" stroke="#3a4152" stroke-width="1.5"/>
+    <circle class="bulb-on" cx="539" cy="62" r="24" fill="url(#glow)"/>
+    <circle cx="539" cy="58" r="10" fill="#8A92A6" fill-opacity=".35"/>
+    <circle class="bulb-on" cx="539" cy="58" r="10" fill="#ffd27a"/>
+    <rect x="534" y="67" width="10" height="8" rx="2" fill="#8A92A6"/>
+    <g class="bulb-on" stroke="#ffd27a" stroke-width="2" stroke-linecap="round">
+      <line x1="539" y1="40" x2="539" y2="44"/><line x1="523" y1="47" x2="526" y2="50"/><line x1="555" y1="47" x2="552" y2="50"/>
+    </g>
+  </g>
+
+  <!-- Desk and keyboard -->
+  <rect x="592" y="250" width="12" height="122" fill="#20252f"/>
+  <rect x="952" y="250" width="12" height="122" fill="#20252f"/>
+  <rect x="470" y="240" width="510" height="10" rx="3" fill="#2a3142"/>
+  <rect x="470" y="240" width="510" height="3" rx="1.5" fill="#343c50"/>
+  <rect x="528" y="233" width="88" height="7" rx="2" fill="#232838"/>
+
+  <!-- Claude Code, hiding behind the monitor until it pops up -->
+  <g class="claude">
+    <rect x="788" y="68" width="8" height="8" fill="#D97757"/>
+    <rect x="840" y="68" width="8" height="8" fill="#D97757"/>
+    <rect x="796" y="56" width="44" height="32" fill="#D97757"/>
+    <rect x="806" y="64" width="5" height="9" fill="#1a1a1a"/>
+    <rect x="825" y="64" width="5" height="9" fill="#1a1a1a"/>
+  </g>
+  <path class="spark s1" d="M778 47 Q778 54 785 54 Q778 54 778 61 Q778 54 771 54 Q778 54 778 47 Z" fill="#ffb960"/>
+  <path class="spark s2" d="M860 40 Q860 46 866 46 Q860 46 860 52 Q860 46 854 46 Q860 46 860 40 Z" fill="#ffb960"/>
+  <path class="spark s3" d="M854 65.5 Q854 70 858.5 70 Q854 70 854 74.5 Q854 70 849.5 70 Q854 70 854 65.5 Z" fill="#ffb960"/>
+
+  <!-- Monitor -->
+  <rect x="730" y="210" width="20" height="24" fill="#2a3142"/>
+  <rect x="702" y="232" width="76" height="8" rx="3" fill="#2a3142"/>
+  <rect x="620" y="86" width="240" height="124" rx="10" fill="#232838"/>
+  <rect x="630" y="96" width="220" height="104" rx="4" fill="#0b0d13"/>
+  <g clip-path="url(#screen)">
+    <circle cx="642" cy="105" r="2.5" fill="#FF6B7D"/><circle cx="651" cy="105" r="2.5" fill="#ffb960"/><circle cx="660" cy="105" r="2.5" fill="#42e1b3"/>
+    <rect class="code c0" x="644" y="116" width="96" height="5" rx="2.5" fill="#b7c4ff"/>
+    <rect class="code c1" x="656" y="126" width="120" height="5" rx="2.5" fill="#42e1b3"/>
+    <rect class="code c2" x="656" y="136" width="76" height="5" rx="2.5" fill="#4a5266"/>
+    <rect class="code c3" x="668" y="146" width="106" height="5" rx="2.5" fill="#ffb960"/>
+    <rect class="code c4" x="656" y="156" width="56" height="5" rx="2.5" fill="#42e1b3"/>
+    <rect class="code c5" x="656" y="166" width="128" height="5" rx="2.5" fill="#D97757"/>
+    <rect class="code c6" x="668" y="176" width="94" height="5" rx="2.5" fill="#D97757"/>
+    <rect class="code c7" x="644" y="186" width="66" height="5" rx="2.5" fill="#D97757"/>
+    <text class="ship-label" x="816" y="189" text-anchor="end" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="11" fill="#42e1b3">shipped</text>
+    <g class="ship">
+      <circle cx="832" cy="185" r="10.5" fill="#42e1b3"/>
+      <path d="M827 185 l3.5 3.5 l7 -8" fill="none" stroke="#0b0d13" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+  </g>
+  </g>
+</svg>
